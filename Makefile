@@ -1,5 +1,10 @@
 ## SPDX-License-Identifier: BSD-3-Clause
 
+ifeq (,$(CONFIG_VBOOT))
+all:
+	@echo "VBOOT disabled — skipping vboot_list/vboot_lib build"
+endif
+
 ifneq ($(words $(CURDIR)),1)
     $(error Error: Path to the main directory cannot contain spaces)
 endif

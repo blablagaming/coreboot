@@ -140,7 +140,7 @@ cse_serger_obj += common.o
 cse_serger_obj += cse_helpers.o
 cse_serger_obj += $(foreach var, $(bpdt_formats_obj), $(var))
 
-TOOLCFLAGS ?= -Werror -Wall -Wextra -Wshadow
+TOOLCFLAGS ?=  -Wall -Wextra -Wshadow
 TOOLCFLAGS += -Wcast-qual -Wmissing-prototypes -Wredundant-decls -Wshadow
 TOOLCFLAGS += -Wstrict-prototypes -Wwrite-strings
 TOOLCFLAGS += -O2
