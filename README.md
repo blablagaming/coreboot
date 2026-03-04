@@ -9,13 +9,15 @@ make crossgcc-i386 CPUS=$(nproc)
 make -C payloads/coreinfo olddefconfig
 make -C payloads/coreinfo
 make menuconfig
-
 ````
 
-select 'Mainboard' menu
-Beside 'Mainboard vendor' should be ```Dell Inc.```
-Beside 'Mainboard model' should be ```Optiplex 9010```
-select < Exit >
+select ``Mainboard`` menu
+
+Beside ``Mainboard vendor`` should be ``Dell Inc.``
+
+Beside ``Mainboard model`` should be ``Optiplex 9010``
+
+select ``<Exit>``
 
 ````
 make savedefconfig
