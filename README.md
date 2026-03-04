@@ -1,4 +1,29 @@
-coreboot README
+personal coreboot README
+===============
+This is meant for personal use, i had to make a few changes for my specific build config.
+
+````
+git clone https://github.com/blablagaming/coreboot.git
+cd coreboot
+make crossgcc-i386 CPUS=$(nproc)
+make -C payloads/coreinfo olddefconfig
+make -C payloads/coreinfo
+make menuconfig
+
+````
+
+select 'Mainboard' menu
+Beside 'Mainboard vendor' should be ```Dell Inc.```
+Beside 'Mainboard model' should be ```Optiplex 9010```
+select < Exit >
+
+````
+make savedefconfig
+cat defconfig
+make -j$(nproc)
+````
+
+original coreboot README
 ===============
 
 coreboot is a Free Software project aimed at replacing the proprietary
